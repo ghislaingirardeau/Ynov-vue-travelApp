@@ -8,14 +8,6 @@ const destinations = sourceData.destinations
   <div class="container">
     <main class="home">
       <h1>destination</h1>
-      <div class="destinations">
-        <div v-for="destination in destinations" :key="destination.id">
-          <h2>
-            {{ destination.name }}
-          </h2>
-          <img :src="`/images/${destination.image}`" />
-        </div>
-      </div>
     </main>
   </div>
 </template>
