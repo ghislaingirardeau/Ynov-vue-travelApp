@@ -1,14 +1,8 @@
-<script setup>
-import sourceData from '@/assets/data.json'
-
-const destinations = sourceData.destinations
-</script>
+<script setup></script>
 
 <template>
   <div class="container">
-    <main class="home">
-      <h1>destination</h1>
-    </main>
+    <RouterView />
   </div>
 </template>
 
