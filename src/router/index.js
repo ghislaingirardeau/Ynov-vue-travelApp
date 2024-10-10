@@ -17,7 +17,12 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: Contact
+    component: Contact,
+    beforeEnter: (to, from) => {
+      // pour proteger une route avec un accès
+
+      return false
+    }
   },
   {
     path: '/brazil',
@@ -30,9 +35,14 @@ const routes = [
     component: Panama
   },
   {
-    path: '/destinations/:id',
+    path: '/destinations/:id/:slug',
     name: 'destinations',
     component: Destination
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'Error',
+    component: Home
   }
 ]
 
