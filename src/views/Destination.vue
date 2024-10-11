@@ -18,6 +18,7 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
 import sourceData from '../assets/data.json'
+import { onMounted } from 'vue'
 const destinations = sourceData.destinations
 
 const route = useRoute()
@@ -32,6 +33,16 @@ function goContact() {
 function goReturn() {
   router.go(-1)
 }
+
+// async function fetchData() {
+//   const data = await fetch('https://travel-dummy-api.netlify.app/' + route.params.slug)
+//   const res = await data.json()
+//   console.log(res)
+// }
+
+// onMounted(() => {
+//   fetchData()
+// })
 </script>
 
 <style lang="scss" scoped></style>
