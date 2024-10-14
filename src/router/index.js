@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
 import Brazil from '../views/Brazil.vue'
 import Panama from '../views/Panama.vue'
-import Destination from '../views/Destination.vue'
+import Panier from '../views/Panier.vue'
 
 const routes = [
   {
@@ -21,8 +21,13 @@ const routes = [
     beforeEnter: (to, from) => {
       // pour proteger une route avec un accès
 
-      return false
+      return true
     }
+  },
+  {
+    path: '/panier',
+    name: 'panier',
+    component: Panier
   },
   {
     path: '/brazil',
@@ -37,7 +42,7 @@ const routes = [
   {
     path: '/destinations/:id/:slug',
     name: 'destinations',
-    component: Destination
+    component: () => import('../views/Destination.vue')
   },
   {
     path: '/:pathMatch(.*)*',

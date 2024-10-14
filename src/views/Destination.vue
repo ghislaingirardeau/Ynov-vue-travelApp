@@ -18,7 +18,7 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
 import sourceData from '../assets/data.json'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 const destinations = sourceData.destinations
 
 const route = useRoute()
